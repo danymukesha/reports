@@ -1,0 +1,14 @@
+Package: reports
+Title: Generate Activity Reports
+Version: 0.0.0.9000
+Authors@R: 
+    person("Dany", "Mukesha", , "danymukesha@gmail.com", 
+            role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0001-9514-751X"))
+Description: Generates scientific reports in PDF format.
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+License: MIT + file LICENSE
+Imports: 
+    rmarkdown

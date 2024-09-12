@@ -1,0 +1,6 @@
+name: report_template
+description: >
+   A description of the template
+create_dir: FALSE
+title: "Report Template"
+output: pdf_document

@@ -1,0 +1,53 @@
+---
+pdf_document:
+  latex_engine: xelatex
+  sansfont: Calibri Light
+date: "`r Sys.Date()`"
+title: "Rapport d'activité / Avancement de 2023-2024"
+output: pdf_document
+---
+\fontsize{14.5}{20}
+\selectfont
+
+# Introduction
+
+La première phase du projet doctoral, débutée en septembre 2023, est consacrée à la mise en place des bases fondamentales pour le projet. Cette phase vise à établir une connaissance approfondie des biomarqueurs urinaires pour la maladie d'Alzheimer (AD) et à intégrer le doctorant dans les environnements de recherche pertinents.
+
+# 1. Revue systématique de la littérature
+
+Au cours des premiers mois, une revue systématique de la littérature a été réalisée. Cette revue a porté sur les biomarqueurs génétiques existants et émergents dans l'urine pour la maladie d'Alzheimer. Les principaux objectifs ont été :
+
+-   **Identification des biomarqueurs** : Recenser les biomarqueurs urinaires déjà décrits dans la littérature et évaluer leur potentiel diagnostique ou pronostique.
+-   **Analyse des techniques** : Étudier les méthodes utilisées pour détecter et quantifier ces biomarqueurs.
+
+Cette revue a permis de constituer une base de connaissances solide et de rédiger des rapports détaillés sur les biomarqueurs urinaires.
+
+# 2. Familiarisation avec l'équipement et les méthodes de laboratoire
+
+Le doctorant s'est familiarisé à des équipements et des méthodes de laboratoire de Firalis pour l'analyse d'urine. Cela comprend :
+
+-   **Utilisation des équipements** : Formation sur les dispositifs de mesure et d'analyse des biomarqueurs.
+-   **Techniques de préparation des échantillons** : Apprentissage des méthodes de collecte, de traitement et de stockage des échantillons urinaires.
+
+# 3. Participation à la summer school
+
+Le doctorant a assisté à la summer school organisée par Firalis en 2024. Cette participation a permis d'acquérir des compétences supplémentaires dans l'analyse des biomarqueurs et de se familiariser avec les dernières avancées scientifiques et technologiques dans le domaine.
+
+# 4. Séjour international à l'Université de Rostock
+
+Un séjour de 2 mois est prévue à l'Université de Rostock, en Allemagne, sous la supervision du Professeur Kriste. Les activités qui sera réalisées lors de ce séjour incluent :
+
+-   **Formation en machine learning** : Acquisition de compétences avancées en apprentissage automatique et deep learning appliqués à l’analyse des données biomédicales.
+-   **Collaboration sur des projets** : Participation à des projets de recherche en cours et échanges de bonnes pratiques avec les équipes de recherche locales.
+
+# 5. Contributions et publications
+
+Le doctorant a contribué à la réalisation d'une recherche scientifique présentée sous forme de poster lors de la conférence AD/PD à Lisbonne en mars 2024. De plus, un premier brouillon de l'article sur les biomarqueurs urinaires dans la maladie d'Alzheimer a été rédigé et est actuellement en révision par le directeur de thèse en attente de retours et d'améliorations.
+
+# 6. Résultats de la recherche
+
+Le doctorant a collaboré activement sur des projets internes à l'entreprise Firalis dans le secteur de la recherche et du développement. Il a conduit des études d'analyse des variations génétiques avec l'équipe de Biologie Computationnelle pour découvrir de nouveaux biomarqueurs génétiques significatifs pour le diagnostic de la maladie d'Alzheimer et d'autres maladies neurodégénératives importantes, comme divers types de démence. Dans ce projet, le doctorant joue un rôle fondamental dans la bioinformatique et l'analyse des données, ce qui devrait conduire à la publication du nouveau produit commercial NeuroDeGene par Firalis. Il a été impliqué dans le développement de packages R permettant le développement rapide, objectif et reproductible des stratégies de recherche en utilisant le text mining et les réseaux de co-occurrence des mots-clés pour identifier les termes importants à inclure dans sa stratégie de recherche. De plus, il a également réalisé de manière indépendante des analyses métabolomiques ciblées de plasma et d'échantillons d'urine provenant de cohortes AD et non-AD présentes dans la Biobanque de Firalis. Il a obtenu certains résultats statistiques de cette analyse et prévoit de travailler sur l'affinement et l'amélioration des méthodes et l'implémentation d'algorithmes d'apprentissage automatique pour des modèles de prédiction des principaux métabolites. Ces efforts visent à fournir de nouvelles perspectives sur la maladie d'Alzheimer et à découvrir potentiellement des biomarqueurs non invasifs plus efficaces, y compris ceux présents dans l'urine et d'autres fluides corporels, pour le diagnostic précoce de l'AD. Le doctorant est engagé dans une expérimentation continue avec les technologies bioinformatiques aux côtés de l'équipe scientifique d'experts chez Firalis tout au long de la première année, démontrant un engagement envers l'apprentissage continu et le suivi des dernières avancées dans le domaine.
+
+# Conclusion
+
+La première phase du projet a été marquée par des progrès significatifs dans la compréhension des biomarqueurs urinaires et l'acquisition de compétences techniques. Les expériences internationales et les contributions scientifiques ont renforcé les bases du projet, préparant le terrain pour les prochaines étapes axées sur l'analyse des données et la diffusion des résultats. Le projet de recherche se concentrera sur l'identification de nouveaux marqueurs urinaires non invasifs pour le diagnostic précoce de la maladie d'Alzheimer (AD). En utilisant des outils bioinformatiques avancés et des analyses métabolomiques ciblées et non ciblées, le projet vise à révéler des aperçus clés sur les mécanismes moléculaires sous-jacents à cette condition.
