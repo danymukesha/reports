@@ -1,0 +1,136 @@
+---
+title: "Metabolomic Signatures and Machine Learning Models for Distinguishing Alzheimer's Disease and Dementia with Lewy Bodies"
+author: "Your Name"
+output: 
+  posterdown::posterdown_html:
+    css: null
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(DiagrammeR)
+library(ggplot2)
+```
+
+## Introduction and Objectives
+
+Alzheimer’s Disease (AD) and Dementia with Lewy Bodies (DLB) are neurodegenerative diseases with overlapping symptoms. The aim of this study is to identify metabolomic biomarkers from serum samples that distinguish between AD, DLB, and healthy controls (HC) using machine learning models.
+
+## Methods
+
+### Data Preprocessing
+
+- **Sample Composition**: 55 AD, 52 HC, and 14 DLB serum samples.
+- **Missing Data Handling**: Biomarkers with >20% missing values were excluded, and values below the Limit of Detection (LOD) were imputed using LOD/2.
+
+### Exploratory Data Analysis
+
+Principal Component Analysis (PCA) was used to explore data structure and check for batch effects and gender differences.
+
+```{r pca, echo=FALSE, fig.width=6, fig.height=4}
+# PCA plot (sample data assumed)
+set.seed(123)
+df <- data.frame(PC1 = rnorm(100), PC2 = rnorm(100), Group = rep(c("AD", "HC", "DLB"), length.out = 100))
+ggplot(df, aes(x = PC1, y = PC2, color = Group)) +
+  geom_point(size = 3) +
+  theme_minimal() +
+  ggtitle("PCA of Serum Metabolomics Data")
+```
+
+### Statistical Analysis and Machine Learning Models
+
+T-tests and fold changes were conducted for individual biomarkers, and AUC was used to assess discriminatory power.
+
+We applied Lasso, Random Forest, Naive Bayes, and XGBoost to classify AD, HC, and DLB groups. Models were evaluated using cross-validation, and performance metrics such as ROC curves were calculated.
+
+### Flowchart of Methods
+
+```{r flowchart, echo=FALSE}
+DiagrammeR::grViz("
+digraph flowchart {
+  node [fontname = Helvetica, shape = box, style = filled, fillcolor = lightblue]
+  
+  subgraph cluster0 {
+    label = 'Sample Data';
+    SampleAD [label = '55 AD Samples'];
+    SampleHC [label = '52 HC Samples'];
+    SampleDLB [label = '14 DLB Samples'];
+    SampleAD -> Preprocessing;
+    SampleHC -> Preprocessing;
+    SampleDLB -> Preprocessing;
+  }
+  
+  Preprocessing [label = 'Data Preprocessing\n- Quality Control\n- Missing Data Management'];
+  
+  subgraph cluster1 {
+    label = 'Statistical Analysis';
+    PCA [label = 'PCA\n- Explore Data Structure'];
+    ANOVA [label = 'ANOVA\n- Age, Gender, Group, Batch Effects'];
+    TTests [label = 'T-tests and Fold Changes'];
+    AUC [label = 'AUC Analysis\n- Discriminatory Power'];
+    Preprocessing -> PCA -> ANOVA -> TTests -> AUC;
+  }
+  
+  subgraph cluster2 {
+    label = 'Machine Learning Models';
+    Lasso [label = 'Lasso'];
+    RF [label = 'Random Forest'];
+    NB [label = 'Naive Bayes'];
+    PLS [label = 'PLS'];
+    XGBoost [label = 'XGBoost'];
+    
+    AUC -> Lasso;
+    AUC -> RF;
+    AUC -> NB;
+    AUC -> PLS;
+    AUC -> XGBoost;
+    
+    Lasso -> CV [label = 'Cross-validation'];
+    RF -> CV;
+    NB -> CV;
+    PLS -> CV;
+    XGBoost -> CV;
+    
+    CV -> Evaluation [label = 'Performance Metrics\n- ROC Curves\n- Variable Importance'];
+  }
+  
+  Evaluation -> Conclusion [label = 'Results: Biomarker Significance\nand Model Performance'];
+}
+")
+```
+
+```{r roc-curve, echo=FALSE, fig.width=6, fig.height=4}
+# Example ROC curve (sample data assumed)
+df_roc <- data.frame(FPR = c(0, 0.1, 0.2, 0.3, 0.4, 1), 
+                     TPR = c(0, 0.6, 0.75, 0.8, 0.9, 1),
+                     Group = "AD vs HC")
+ggplot(df_roc, aes(x = FPR, y = TPR)) +
+  geom_line(color = "blue", size = 1.5) +
+  geom_abline(linetype = "dashed") +
+  theme_minimal() +
+  ggtitle("ROC Curve Example")
+```
+
+## Results
+
+Significant biomarkers were identified for AD vs HC, AD vs DLB, and DLB vs HC. Machine learning models achieved high classification accuracy with AUC values ~0.9 for AD vs HC. Including APOE genotype improved model performance.
+
+## Conclusion
+
+The study identified metabolomic signatures that distinguish between AD, DLB, and HC groups. Machine learning models demonstrated high classification accuracy. Future work will extend this analysis to ~2000 urine samples from the DELCODE cohort for broader validation.
+
+---
+
+## References
+
+- references go here.
+
+<!-- ### Key Points: -->
+
+<!-- 1. **Title and Author**: At the top. -->
+<!-- 2. **Introduction and Objectives**: Top-left column. -->
+<!-- 3. **Methods**: Middle column, which includes a PCA plot and a flowchart. -->
+<!-- 4. **Machine Learning Models and Results**: Right column, with a ROC curve and conclusion. -->
+<!-- 5. **References**: At the bottom. -->
+
