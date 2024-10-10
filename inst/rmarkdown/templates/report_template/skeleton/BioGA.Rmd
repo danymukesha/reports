@@ -1,25 +1,18 @@
 ---
-title: "Optimizing Genomic Data with Genetic Algorithms"
+title: "Optimizing Genomic Data with Genetic Algorithms(GAs)"
 author:
-  - name: Dany Mukesha
-    affiliation: University of Côte d'Azur
-    address: |
-      Av. Valrose, 06000 Nice
-    email: \href{mailto:danymukesha@gmail.com}{danymukesha@gmail.com}
-    orcid: \href{https://orcid.org/0009-0001-9514-751X}{0009-0001-9514-751X}
-    url: \href{https://danymukesha.github.io}{https://danymukesha.github.io}
+  - Dany Mukesha^[University of Côte d'Azur,"https://orcid.org/0009-0001-9514-751X", danymukesha@gmail.com]
 date: "`r Sys.Date()`"
 output:
   pdf_document:
     latex_engine: xelatex
     keep_tex: true
-    toc: true
-editor_options: 
-  markdown: 
+    toc: false
+editor_options:
+  markdown:
     wrap: sentence
 ---
-
-\fontsize{14.5}{20}
+\fontsize{12}{15}
 \selectfont
 
 # Abstract
